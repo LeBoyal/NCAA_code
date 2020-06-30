@@ -53,7 +53,6 @@ def preprocess(path, scale=3):
   # Must be normalized
   image = (image-127.5 )/ 127.5 
   label_ = (image-127.5 )/ 127.5 
-  #下采样之后再插�?  input_ = scipy.ndimage.interpolation.zoom(label_, (1./scale), prefilter=False)
   input_ = scipy.ndimage.interpolation.zoom(input_, (scale/1.), prefilter=False)
 
   return input_, label_
